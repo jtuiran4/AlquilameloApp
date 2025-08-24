@@ -6,6 +6,8 @@ import 'package:alquilamelo_app/HomeScreen.dart';
 import 'package:alquilamelo_app/PerfilScreen.dart';
 import 'package:alquilamelo_app/SearchScreen.dart';
 import 'package:alquilamelo_app/PropScreen.dart';
+import 'package:alquilamelo_app/CheckoutScreen.dart';
+import 'package:alquilamelo_app/PaymentScreen.dart';
 
 class AlquilameloApp extends StatelessWidget {
   const AlquilameloApp({super.key});
@@ -13,7 +15,6 @@ class AlquilameloApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const primary = Color(0xFFF88245); // Naranja
-    const navy = Color(0xFF133354);    // Azul oscuro
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -32,6 +33,9 @@ class AlquilameloApp extends StatelessWidget {
         '/perfil': (context) => const PerfilScreen(), 
         '/search': (context) => const SearchScreen(),
         '/propiedad': (context) => const PropertyDetailScreen(),
+        '/checkout': (context) => const CheckoutScreen(),
+        '/payment': (context) => const PaymentScreen(),
+
 
       },
     );

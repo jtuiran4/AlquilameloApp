@@ -9,7 +9,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   static const primary = Color(0xFFF88245);
-  static const navy = Color(0xFF133354);
 
   final TextEditingController _lugarCtrl = TextEditingController();
   DateTimeRange? _rango;

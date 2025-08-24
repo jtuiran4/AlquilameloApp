@@ -6,7 +6,6 @@ class PropertyDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const primary = Color(0xFFF88245);
-    const navy = Color(0xFF133354);
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -46,16 +45,21 @@ class PropertyDetailScreen extends StatelessWidget {
                 ),
               ),
 
-              // Imagen de la propiedad
+              // Carrusel de imágenes de la propiedad
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(
-                    "assets/hotel.png", // reemplaza con tu imagen
-                    fit: BoxFit.cover,
-                    width: double.infinity,
+                  child: SizedBox(
                     height: 200,
+                    width: double.infinity,
+                    child: PageView(
+                      children: [
+                        Image.asset("assets/hotel.png", fit: BoxFit.cover, width: double.infinity, height: 200),
+                        Image.asset("assets/hotel2.jpg", fit: BoxFit.cover, width: double.infinity, height: 200),
+                        // Puedes agregar más imágenes aquí
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -194,7 +198,7 @@ class PropertyDetailScreen extends StatelessWidget {
                                 ),
                                 ElevatedButton(
                                   onPressed: () {
-                                    // acción de reservar
+                                    Navigator.of(context).pushNamed('/checkout');
                                   },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: primary,
