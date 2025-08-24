@@ -48,7 +48,6 @@ class SearchScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Barra de búsqueda
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
               decoration: BoxDecoration(
@@ -70,7 +69,6 @@ class SearchScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            // Lista de apartamentos
             Expanded(
               child: ListView.builder(
                 itemCount: 3,

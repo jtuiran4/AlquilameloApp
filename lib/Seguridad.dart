@@ -45,7 +45,6 @@ class _SeguridadState extends State<Seguridad> {
             ),
             const SizedBox(height: 20),
 
-            // Contraseña actual
             TextField(
               controller: _actualController,
               obscureText: true,
@@ -59,7 +58,6 @@ class _SeguridadState extends State<Seguridad> {
             ),
             const SizedBox(height: 20),
 
-            // Contraseña nueva
             TextField(
               controller: _nuevaController,
               obscureText: true,
@@ -73,7 +71,6 @@ class _SeguridadState extends State<Seguridad> {
             ),
             const SizedBox(height: 20),
 
-            // Confirmar contraseña nueva
             TextField(
               controller: _confirmarController,
               obscureText: true,
@@ -87,7 +84,6 @@ class _SeguridadState extends State<Seguridad> {
             ),
             const SizedBox(height: 30),
 
-            // Botón Guardar
             Center(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -99,7 +95,7 @@ class _SeguridadState extends State<Seguridad> {
                   ),
                 ),
                 onPressed: () {
-                  // Aquí puedes poner la lógica de cambiar contraseña
+                  Navigator.pop(context);
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text("Contraseña actualizada")),
                   );

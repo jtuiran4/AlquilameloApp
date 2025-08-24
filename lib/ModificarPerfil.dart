@@ -12,7 +12,7 @@ class ModificarPerfil extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Encabezado con flecha y título
+              
               Row(
                 children: [
                   IconButton(
@@ -32,7 +32,7 @@ class ModificarPerfil extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Icono de usuario
+              
               Center(
                 child: CircleAvatar(
                   radius: 45,
@@ -42,7 +42,7 @@ class ModificarPerfil extends StatelessWidget {
               ),
               const SizedBox(height: 30),
 
-              // Campos de texto
+              
               const TextField(
                 decoration: InputDecoration(
                   labelText: "Nombres",
@@ -91,7 +91,7 @@ class ModificarPerfil extends StatelessWidget {
               ),
               const SizedBox(height: 25),
 
-              // Botones
+              
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -106,7 +106,9 @@ class ModificarPerfil extends StatelessWidget {
                       ),
                       elevation: 4,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('/');
+                    },
                     child: const Text("Eliminar Perfil"),
                   ),
                   ElevatedButton(
@@ -118,7 +120,9 @@ class ModificarPerfil extends StatelessWidget {
                       ),
                       elevation: 4,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     child: const Text(
                       "Guardar",
                       style: TextStyle(color: Colors.white),

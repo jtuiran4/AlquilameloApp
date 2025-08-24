@@ -22,7 +22,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // Header con back + logo + usuario
+              
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 child: Row(
@@ -52,7 +52,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 ),
               ),
 
-              // Formulario de pago
+              
               Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
@@ -65,7 +65,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     ),
                     const SizedBox(height: 16),
 
-                    // Logos de métodos de pago (solo PNG/JPG)
+                  
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
@@ -99,7 +99,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       key: _formKey,
                       child: Column(
                         children: [
-                          // Número de tarjeta
+                          
                           TextFormField(
                             keyboardType: TextInputType.number,
                             decoration: _inputDecor("Número de la tarjeta"),
@@ -108,7 +108,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                           ),
                           const SizedBox(height: 12),
 
-                          // Titular
+                          
                           TextFormField(
                             decoration: _inputDecor("Titular de la cuenta"),
                             validator: (value) =>
@@ -116,7 +116,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                           ),
                           const SizedBox(height: 12),
 
-                          // Fecha de caducidad y CVV
+                      
                           Row(
                             children: [
                               Expanded(
@@ -146,7 +146,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
                     const SizedBox(height: 16),
 
-                    // Aceptar términos
                     Row(
                       children: [
                         Checkbox(
@@ -165,7 +164,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 ),
               ),
 
-              // Precio final
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 padding: const EdgeInsets.all(16),
@@ -197,7 +195,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 ),
               ),
 
-              // Botón completar pago
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
@@ -206,11 +203,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   height: 48,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navega directamente a /confirmacion
-                      // Debes crear el objeto summary real si lo necesitas
-                      // Ejemplo:
-                      // final summary = ReservationSummary(...);
-                      // Navigator.of(context).pushNamed('/confirmacion', arguments: summary);
                       Navigator.of(context).pushNamed('/confirmacion');
                     },
                     style: ElevatedButton.styleFrom(

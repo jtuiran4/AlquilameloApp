@@ -20,7 +20,6 @@ class _HomeScreenState extends State<HomeScreen> {
     final f = _rango!.end;
     String dos(int n) => n.toString().padLeft(2, '0');
     return '${dos(i.day)}/${dos(i.month)}/${i.year}  -  ${dos(f.day)}/${dos(f.month)}/${f.year}';
-    // Puedes formatear con intl si deseas
   }
 
   @override
@@ -33,7 +32,6 @@ Widget build(BuildContext context) {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Encabezado: logo centrado y usuario a la derecha
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -58,7 +56,6 @@ Widget build(BuildContext context) {
 
             const SizedBox(height: 40),
 
-            // Campo Lugar
             _Etiqueta('Lugar'),
             _ChipField(
               child: TextField(
@@ -69,7 +66,6 @@ Widget build(BuildContext context) {
             ),
             const SizedBox(height: 14),
 
-            // Campo Fechas
             _Etiqueta('Fechas'),
             _ChipField(
               onTap: _seleccionarRangoFechas,
@@ -85,7 +81,6 @@ Widget build(BuildContext context) {
             ),
             const SizedBox(height: 14),
 
-            // Campo Huéspedes
             _Etiqueta('Huéspedes'),
             _ChipField(
               onTap: _seleccionarHuespedes,
@@ -100,7 +95,6 @@ Widget build(BuildContext context) {
               ),
             ),
 
-            // Botón CTA justo debajo de Huéspedes
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 25),
               child: SizedBox(
@@ -128,8 +122,6 @@ Widget build(BuildContext context) {
   );
 }
 
-
-  // ---------- helpers de UI ----------
 
   InputDecoration _decoracion(String hint, {IconData? suffix}) {
     return InputDecoration(
@@ -225,20 +217,9 @@ Widget build(BuildContext context) {
       },
     );
   }
-
-  void _buscar() {
-    // Aquí puedes navegar a resultados y pasar los valores
-    // p.ej.: Navigator.pushNamed(context, '/resultados', arguments: {...});
-    debugPrint('Lugar: ${_lugarCtrl.text}');
-    debugPrint('Fechas: $_fechasTexto');
-    debugPrint('Huéspedes: $_huespedes');
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Buscando alojamientos...')),
-    );
-  }
 }
 
-// Widgets pequeños para reutilizar estilos
+
 class _Etiqueta extends StatelessWidget {
   final String text;
   const _Etiqueta(this.text);

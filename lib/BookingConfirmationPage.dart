@@ -9,7 +9,6 @@ class BookingConfirmationPage extends StatelessWidget {
     const orange = Color(0xFFFF8A4C);
     const orangeDark = Color(0xFFF56A2A);
     const textDark = Color(0xFF1B1B1B);
-    const subtitle = Color(0xFF6B6B6B);
 
     return Scaffold(
       body: SafeArea(
@@ -33,7 +32,7 @@ class BookingConfirmationPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // App bar estilo custom
+
                   Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -62,7 +61,7 @@ class BookingConfirmationPage extends StatelessWidget {
 
                   const SizedBox(height: 10),
 
-                  // Check de éxito
+                  
                   Row(
                     children: [
                       _CheckBadge(
@@ -92,7 +91,7 @@ class BookingConfirmationPage extends StatelessWidget {
                   const _SectionTitle('Resumen'),
 
                   const SizedBox(height: 8),
-                  // Alojamiento
+                  
                   const _LabelValueBlock(
                     title: 'Apartamento en la playa',
                     subtitle: 'Miami, FL.',
@@ -106,7 +105,7 @@ class BookingConfirmationPage extends StatelessWidget {
                   ),
 
                   const SizedBox(height: 14),
-                  // Fechas
+                  
                   _TwoColRows(
                     rows: const [
                       ('Fecha de Entrada', 'Dom 24, agosto 2025'),
@@ -116,7 +115,7 @@ class BookingConfirmationPage extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  // Precio
+                  
                   const _PriceBlock(
                     label: 'Precio Pagado',
                     amountLine1: '\$\$\$\$\$\$',
@@ -148,30 +147,6 @@ class BookingConfirmationPage extends StatelessWidget {
   }
 }
 
-/* ---------- Widgets auxiliares ---------- */
-
-class _RoundIconButton extends StatelessWidget {
-  final IconData icon;
-  final VoidCallback onTap;
-  const _RoundIconButton({required this.icon, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkResponse(
-      onTap: onTap,
-      radius: 24,
-      child: Container(
-        width: 34,
-        height: 34,
-        decoration: BoxDecoration(
-          color: const Color(0xFFF6F6F6),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Icon(icon, size: 22, color: const Color(0xFF6B6B6B)),
-      ),
-    );
-  }
-}
 
 class _CheckBadge extends StatelessWidget {
   final Color border;

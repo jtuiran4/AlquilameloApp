@@ -14,7 +14,6 @@ class PropertyDetailScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Header con back, logo y user
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 child: Row(
@@ -45,7 +44,6 @@ class PropertyDetailScreen extends StatelessWidget {
                 ),
               ),
 
-              // Carrusel de imágenes de la propiedad
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: ClipRRect(
@@ -57,14 +55,12 @@ class PropertyDetailScreen extends StatelessWidget {
                       children: [
                         Image.asset("assets/hotel.png", fit: BoxFit.cover, width: double.infinity, height: 200),
                         Image.asset("assets/hotel2.jpg", fit: BoxFit.cover, width: double.infinity, height: 200),
-                        // Puedes agregar más imágenes aquí
                       ],
                     ),
                   ),
                 ),
               ),
 
-              // Título + ubicación + estrellas
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
                 child: Column(
@@ -93,7 +89,6 @@ class PropertyDetailScreen extends StatelessWidget {
                 ),
               ),
 
-              // Amenidades
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                 child: Row(
@@ -107,7 +102,6 @@ class PropertyDetailScreen extends StatelessWidget {
                 ),
               ),
 
-              // Descripción
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
@@ -121,7 +115,6 @@ class PropertyDetailScreen extends StatelessWidget {
 
               const SizedBox(height: 24),
 
-              // Escoge tu habitación
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Text(

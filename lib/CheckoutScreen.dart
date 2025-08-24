@@ -13,7 +13,6 @@ class CheckoutScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // Header con back + logo + usuario
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 child: Row(
@@ -39,7 +38,6 @@ class CheckoutScreen extends StatelessWidget {
                 ),
               ),
 
-              // Detalle propiedad
               const _SectionCard(
                 title: "Apartamento en la playa",
                 subtitle: "Miami, FL.",
@@ -52,7 +50,6 @@ class CheckoutScreen extends StatelessWidget {
                 ],
               ),
 
-              // Fechas
               const _InfoRowCard(
                 title: "Fecha de Entrada",
                 value: "Dom 24, agosto 2025",
@@ -62,10 +59,8 @@ class CheckoutScreen extends StatelessWidget {
                 value: "Mar 26, agosto 2025",
               ),
 
-              // Resumen habitación
               const _SummaryCard(),
 
-              // Precio final
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 padding: const EdgeInsets.all(16),
@@ -103,7 +98,6 @@ class CheckoutScreen extends StatelessWidget {
                 ),
               ),
 
-              // Botón continuar
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
@@ -132,7 +126,6 @@ class CheckoutScreen extends StatelessWidget {
   }
 }
 
-// ---------- Widgets auxiliares ----------
 
 class _SectionCard extends StatelessWidget {
   final String title;

@@ -14,14 +14,12 @@ class SplashScreen extends StatelessWidget {
           child: Column(
             children: [
               const Spacer(),
-              // LOGO desde assets
               Image.asset(
-                'assets/alquilamelologo.png', // 👈 ruta al logo
+                'assets/alquilamelologo.png', 
                 width: 220,
                 fit: BoxFit.contain,
               ),
               const Spacer(),
-              // Botón "Iniciar Sesión"
               SizedBox(
                 width: 220,
                 height: 44,
@@ -41,7 +39,6 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 12),
-              // Botón "Registrarse"
               SizedBox(
                 width: 220,
                 height: 44,
@@ -64,21 +61,6 @@ class SplashScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-// Pantallas de ejemplo para navegación (reemplázalas por tus vistas reales)
-class DummyPage extends StatelessWidget {
-  final String title;
-  const DummyPage({super.key, required this.title});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text(title)),
-      body: Center(
-        child: Text('Aquí va la pantalla de $title'),
       ),
     );
   }

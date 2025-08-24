@@ -17,7 +17,7 @@ class LoginScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 40),
-              // Logo
+
               Row(
                 children: [
                   Image.asset(
@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 50),
-              // Título
+
               const Text(
                 "Identifícate",
                 style: TextStyle(
@@ -38,7 +38,6 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Campo Correo
               TextField(
                 decoration: InputDecoration(
                   hintText: "Correo",
@@ -53,7 +52,6 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
 
-              // Campo Contraseña
               TextField(
                 obscureText: true,
                 decoration: InputDecoration(
@@ -69,7 +67,6 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
 
-              // Link de registro
               Row(
                 children: [
                   const Text("¿No tienes cuenta? "),
@@ -89,7 +86,6 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 30),
 
-              // Botón Iniciar Sesión
               SizedBox(
                 width: double.infinity,
                 height: 48,

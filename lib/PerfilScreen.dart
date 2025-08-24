@@ -15,7 +15,6 @@ class PerfilScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Encabezado con botón atrás y saludo
               Row(
                 children: [
                   IconButton(
@@ -38,7 +37,6 @@ class PerfilScreen extends StatelessWidget {
 
               const SizedBox(height: 40),
 
-              // Opción: Modificar Perfil
               _ProfileOption(
                 icon: Icons.person_outline,
                 label: "Modificar Perfil",
@@ -48,7 +46,6 @@ class PerfilScreen extends StatelessWidget {
               ),
               const Divider(),
 
-              // Opción: Mis Reservas
               _ProfileOption(
                 icon: Icons.event_seat_outlined,
                 label: "Mis Reservas",
@@ -58,7 +55,6 @@ class PerfilScreen extends StatelessWidget {
               ),
               const Divider(),
 
-              // Opción: Seguridad
               _ProfileOption(
                 icon: Icons.security_outlined,
                 label: "Seguridad",

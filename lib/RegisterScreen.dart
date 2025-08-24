@@ -15,7 +15,6 @@ class RegisterScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Logo
               Row(
                 children: [
                   Image.asset(
@@ -27,7 +26,6 @@ class RegisterScreen extends StatelessWidget {
               ),
               const SizedBox(height: 40),
 
-              // Título
               const Text(
                 "Crea tu cuenta",
                 style: TextStyle(
@@ -37,27 +35,21 @@ class RegisterScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Campo Nombre
               _buildTextField(Icons.person_outline, "Nombre"),
               const SizedBox(height: 12),
 
-              // Campo Apellido
               _buildTextField(Icons.person_outline, "Apellido"),
               const SizedBox(height: 12),
 
-              // Campo Fecha de Nacimiento
               _buildTextField(Icons.calendar_today_outlined, "Fecha de Nacimiento"),
               const SizedBox(height: 12),
 
-              // Campo Correo
               _buildTextField(Icons.mail_outline, "Correo"),
               const SizedBox(height: 12),
 
-              // Campo Contraseña
               _buildTextField(Icons.lock_outline, "Contraseña", isPassword: true),
               const SizedBox(height: 30),
 
-              // Botón Registrarse
               SizedBox(
                 width: double.infinity,
                 height: 48,
@@ -77,7 +69,6 @@ class RegisterScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Link a Iniciar Sesión
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -103,7 +94,6 @@ class RegisterScreen extends StatelessWidget {
     );
   }
 
-  // Método para construir campos de texto con estilo
   static Widget _buildTextField(IconData icon, String hint,
       {bool isPassword = false}) {
     return TextField(

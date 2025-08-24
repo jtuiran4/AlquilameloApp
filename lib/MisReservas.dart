@@ -14,7 +14,7 @@ class MisReservas extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Color(0xFFF88245)),
           onPressed: () {
-            Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+            Navigator.pop(context);
           },
         ),
         title: Row(
@@ -54,10 +54,10 @@ class MisReservas extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            // Lista de reservas
+            
             Expanded(
               child: ListView.builder(
-                itemCount: 2, // aquí puedes poner dinámico según tus reservas
+                itemCount: 2, 
                 itemBuilder: (context, index) {
                   return ReservaCard();
                 },
@@ -84,11 +84,11 @@ class ReservaCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Imagen
+          
           ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
             child: Image.asset(
-              "assets/hotel_room.jpg", // reemplaza con tu imagen
+              "assets/hotel_room.jpg", 
               height: 160,
               width: double.infinity,
               fit: BoxFit.cover,
