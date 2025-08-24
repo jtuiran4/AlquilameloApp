@@ -108,7 +108,9 @@ Widget build(BuildContext context) {
                 width: double.infinity,
                 height: 48,
                 child: ElevatedButton(
-                  onPressed: _buscar,
+                    onPressed: (){
+                      Navigator.of(context).pushReplacementNamed('/search');
+                    },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: primary,
                     foregroundColor: Colors.white,
