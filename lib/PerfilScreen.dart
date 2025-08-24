@@ -43,7 +43,7 @@ class PerfilScreen extends StatelessWidget {
                 icon: Icons.person_outline,
                 label: "Modificar Perfil",
                 onTap: () {
-                  // lógica para modificar perfil
+                  Navigator.pushNamed(context, '/modificarPerfil');
                 },
               ),
               const Divider(),
@@ -53,7 +53,7 @@ class PerfilScreen extends StatelessWidget {
                 icon: Icons.event_seat_outlined,
                 label: "Mis Reservas",
                 onTap: () {
-                  // navegar a reservas
+                  Navigator.pushNamed(context, '/misReservas');
                 },
               ),
               const Divider(),
@@ -63,7 +63,7 @@ class PerfilScreen extends StatelessWidget {
                 icon: Icons.security_outlined,
                 label: "Seguridad",
                 onTap: () {
-                  // navegar a seguridad
+                  Navigator.pushNamed(context, '/seguridad');
                 },
               ),
             ],

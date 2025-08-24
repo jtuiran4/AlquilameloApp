@@ -8,6 +8,9 @@ import 'package:alquilamelo_app/SearchScreen.dart';
 import 'package:alquilamelo_app/PropScreen.dart';
 import 'package:alquilamelo_app/CheckoutScreen.dart';
 import 'package:alquilamelo_app/PaymentScreen.dart';
+import 'package:alquilamelo_app/ModificarPerfil.dart';
+import 'package:alquilamelo_app/Seguridad.dart';
+import 'package:alquilamelo_app/MisReservas.dart';
 
 class AlquilameloApp extends StatelessWidget {
   const AlquilameloApp({super.key});
@@ -35,9 +38,14 @@ class AlquilameloApp extends StatelessWidget {
         '/propiedad': (context) => const PropertyDetailScreen(),
         '/checkout': (context) => const CheckoutScreen(),
         '/payment': (context) => const PaymentScreen(),
+        '/modificarPerfil': (context) => const ModificarPerfil(),
+        '/seguridad': (context) => const Seguridad(),
+        '/misReservas': (context) => const MisReservas(),
+        
 
 
       },
-    );
+    )
+;
   }
 }
