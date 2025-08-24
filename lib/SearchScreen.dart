@@ -3,47 +3,54 @@ import 'package:flutter/material.dart';
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
 
-  final String imageUrl =
-      "https://i.imgur.com/HR4lO9C.jpg"; // cámbialo por tus assets si quieres
+  final String imageUrl = "assets/hotel.png"; 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        toolbarHeight: 60,
+        toolbarHeight: 80,
         elevation: 0,
         backgroundColor: Colors.white,
         leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.arrow_back_ios, color: Colors.orange),
+          icon: const Icon(Icons.arrow_back_ios, color: Color(0xFFF88245)),
+          onPressed: () {
+            Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+          },
         ),
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.location_on, color: Colors.orange),
-            const SizedBox(width: 4),
-            Text(
-              "Alquílamelo",
-              style: TextStyle(
-                color: Colors.blue[900],
-                fontWeight: FontWeight.bold,
+            Expanded(
+              child: Center(
+                child: Image.asset(
+                  'assets/alquilamelologo.png',
+                  height: 150,
+                ),
               ),
             ),
           ],
         ),
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.person, color: Colors.orange),
+            onPressed: () {
+              Navigator.of(context).pushNamed('/perfil');
+              debugPrint("Perfil presionado");
+            },
+            icon: const Icon(Icons.person_outline,
+                color: Color(0xFFF88245), size: 28),
           ),
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 30),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Barra de búsqueda
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
               decoration: BoxDecoration(
                 color: Colors.grey[200],
                 borderRadius: BorderRadius.circular(25),
@@ -63,7 +70,6 @@ class SearchScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-
             // Lista de apartamentos
             Expanded(
               child: ListView.builder(
@@ -77,7 +83,7 @@ class SearchScreen extends StatelessWidget {
                     clipBehavior: Clip.hardEdge,
                     child: Stack(
                       children: [
-                        Image.network(
+                        Image.asset(
                           imageUrl,
                           height: 180,
                           width: double.infinity,

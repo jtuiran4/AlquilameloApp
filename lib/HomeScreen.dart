@@ -48,7 +48,7 @@ Widget build(BuildContext context) {
                 ),
                 IconButton(
                   onPressed: () {
-                    Navigator.of(context).pushReplacementNamed('/perfil');
+                    Navigator.of(context).pushNamed('/perfil');
                     debugPrint("Perfil presionado");
                   },
                   icon: const Icon(Icons.person_outline,
