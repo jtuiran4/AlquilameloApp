@@ -21,7 +21,9 @@ class PerfilScreen extends StatelessWidget {
                   IconButton(
                     icon: const Icon(Icons.arrow_back_ios,
                         color: primary, size: 22),
-                    onPressed: () => Navigator.pop(context),
+                    onPressed: () {
+                    Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+}
                   ),
                   const SizedBox(width: 8),
                   const Text(
