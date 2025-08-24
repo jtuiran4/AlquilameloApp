@@ -5,6 +5,7 @@ import 'package:alquilamelo_app/SplashScreen.dart';
 import 'package:alquilamelo_app/HomeScreen.dart';
 import 'package:alquilamelo_app/PerfilScreen.dart';
 import 'package:alquilamelo_app/SearchScreen.dart';
+import 'package:alquilamelo_app/PropScreen.dart';
 
 class AlquilameloApp extends StatelessWidget {
   const AlquilameloApp({super.key});
@@ -30,6 +31,7 @@ class AlquilameloApp extends StatelessWidget {
         '/home': (context) => const HomeScreen(),
         '/perfil': (context) => const PerfilScreen(), 
         '/search': (context) => const SearchScreen(),
+        '/propiedad': (context) => const PropertyDetailScreen(),
 
       },
     );

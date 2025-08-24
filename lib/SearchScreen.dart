@@ -75,53 +75,58 @@ class SearchScreen extends StatelessWidget {
               child: ListView.builder(
                 itemCount: 3,
                 itemBuilder: (context, index) {
-                  return Card(
-                    margin: const EdgeInsets.only(bottom: 16),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    clipBehavior: Clip.hardEdge,
-                    child: Stack(
-                      children: [
-                        Image.asset(
-                          imageUrl,
-                          height: 180,
-                          width: double.infinity,
-                          fit: BoxFit.cover,
-                        ),
-                        Positioned(
-                          bottom: 10,
-                          left: 10,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                "Apartamento en la playa",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                              const SizedBox(height: 4),
-                              Row(
-                                children: const [
-                                  Icon(Icons.person,
-                                      color: Colors.white, size: 18),
-                                  SizedBox(width: 4),
-                                  Text(
-                                    "10",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                  return InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushNamed('/propiedad');
+                    },
+                    child: Card(
+                      margin: const EdgeInsets.only(bottom: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      clipBehavior: Clip.hardEdge,
+                      child: Stack(
+                        children: [
+                          Image.asset(
+                            imageUrl,
+                            height: 180,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
                           ),
-                        )
-                      ],
+                          Positioned(
+                            bottom: 10,
+                            left: 10,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  "Apartamento en la playa",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Row(
+                                  children: const [
+                                    Icon(Icons.person,
+                                        color: Colors.white, size: 18),
+                                    SizedBox(width: 4),
+                                    Text(
+                                      "10",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   );
                 },
