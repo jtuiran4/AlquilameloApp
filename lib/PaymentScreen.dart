@@ -9,7 +9,6 @@ class PaymentScreen extends StatefulWidget {
 
 class _PaymentScreenState extends State<PaymentScreen> {
   static const primary = Color(0xFFF88245);
-  static const navy = Color(0xFF133354);
 
   final _formKey = GlobalKey<FormState>();
 
@@ -207,21 +206,15 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   height: 48,
                   child: ElevatedButton(
                     onPressed: () {
-                      if (_formKey.currentState!.validate() && _accepted) {
-                        // lógica de pago
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                              content: Text("Pago completado con éxito ✅")),
-                        );
-                      } else {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                              content: Text(
-                                  "Complete los campos y acepte los términos")),
-                        );
-                      }
+                      // Navega directamente a /confirmacion
+                      // Debes crear el objeto summary real si lo necesitas
+                      // Ejemplo:
+                      // final summary = ReservationSummary(...);
+                      // Navigator.of(context).pushNamed('/confirmacion', arguments: summary);
+                      Navigator.of(context).pushNamed('/confirmacion');
                     },
                     style: ElevatedButton.styleFrom(
+                      
                       backgroundColor: primary,
                       foregroundColor: Colors.white,
                       shape: const StadiumBorder(),

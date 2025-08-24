@@ -8,25 +8,36 @@ class MisReservas extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        toolbarHeight: 80,
         elevation: 0,
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.orange),
-          onPressed: () => Navigator.pop(context),
+          icon: const Icon(Icons.arrow_back_ios, color: Color(0xFFF88245)),
+          onPressed: () {
+            Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+          },
         ),
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              "assets/alquilamelologo.png",
-              height: 90,
+            Expanded(
+              child: Center(
+                child: Image.asset(
+                  'assets/alquilamelologo.png',
+                  height: 150,
+                ),
+              ),
             ),
-            
           ],
         ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 12),
-            child: Icon(Icons.person_outline, color: Colors.orange),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed('/perfil');
+              debugPrint("Perfil presionado");
+            },
+            icon: const Icon(Icons.person_outline,
+                color: Color(0xFFF88245), size: 28),
           ),
         ],
       ),
@@ -43,7 +54,6 @@ class MisReservas extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-
             // Lista de reservas
             Expanded(
               child: ListView.builder(
@@ -78,7 +88,7 @@ class ReservaCard extends StatelessWidget {
           ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
             child: Image.asset(
-              "assets/habitacion.jpg", // reemplaza con tu imagen
+              "assets/hotel_room.jpg", // reemplaza con tu imagen
               height: 160,
               width: double.infinity,
               fit: BoxFit.cover,
@@ -157,7 +167,7 @@ class ReservaCard extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/confirmacionReserva');
+                        Navigator.pushNamed(context, '/confirmacion');
                       },
                       child: const Text("Ver Reserva"),
                     ),

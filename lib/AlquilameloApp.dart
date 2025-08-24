@@ -11,6 +11,7 @@ import 'package:alquilamelo_app/PaymentScreen.dart';
 import 'package:alquilamelo_app/ModificarPerfil.dart';
 import 'package:alquilamelo_app/Seguridad.dart';
 import 'package:alquilamelo_app/MisReservas.dart';
+import 'package:alquilamelo_app/BookingConfirmationPage.dart';
 
 class AlquilameloApp extends StatelessWidget {
   const AlquilameloApp({super.key});
@@ -41,11 +42,10 @@ class AlquilameloApp extends StatelessWidget {
         '/modificarPerfil': (context) => const ModificarPerfil(),
         '/seguridad': (context) => const Seguridad(),
         '/misReservas': (context) => const MisReservas(),
+        '/confirmacion': (context) => const BookingConfirmationPage(),
+        },
+    );
         
-
-
-      },
-    )
-;
+      }
+    
   }
-}
