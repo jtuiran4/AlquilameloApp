@@ -1,3 +1,5 @@
+import 'package:alquilamelo_app/LoginScreen.dart';
+import 'package:alquilamelo_app/RegisterScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:alquilamelo_app/SplashScreen.dart';
 
@@ -20,8 +22,8 @@ class AlquilameloApp extends StatelessWidget {
       ),
       routes: {
         '/': (context) => const SplashScreen(),
-        '/login': (context) => const DummyPage(title: 'Login'),
-        '/register': (context) => const DummyPage(title: 'Registro'),
+        '/login': (context) => const LoginScreen(),
+        '/register': (context) => const RegisterScreen(),
       },
     );
   }

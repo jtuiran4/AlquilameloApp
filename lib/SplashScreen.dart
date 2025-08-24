@@ -6,7 +6,6 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const primary = Color(0xFFF88245);
-    const navy = Color(0xFF133354);
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -15,35 +14,24 @@ class SplashScreen extends StatelessWidget {
           child: Column(
             children: [
               const Spacer(),
-              // LOGO: pin + texto Alquílamelo
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: const [
-                  Icon(Icons.place_rounded, color: primary, size: 44),
-                  SizedBox(width: 10),
-                  Text(
-                    'Alquílamelo',
-                    style: TextStyle(
-                      color: navy,
-                      fontSize: 28,
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: 0.2,
-                    ),
-                  ),
-                ],
+              // LOGO desde assets
+              Image.asset(
+                'assets/alquilamelologo.png', // 👈 ruta al logo
+                width: 220,
+                fit: BoxFit.contain,
               ),
               const Spacer(),
-              // Botón "Iniciar Sesión" (naranja)
+              // Botón "Iniciar Sesión"
               SizedBox(
                 width: 220,
                 height: 44,
                 child: ElevatedButton(
-                  onPressed: () => Navigator.pushNamed(context, '/login'),
+                  onPressed: () {
+                    Navigator.of(context).pushReplacementNamed('/login');
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: primary,
                     foregroundColor: Colors.white,
-                    elevation: 0,
                     shape: const StadiumBorder(),
                     textStyle: const TextStyle(
                       fontWeight: FontWeight.w600,
@@ -53,20 +41,21 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 12),
-              // Botón "Registrarse" (blanco con sombra)
+              // Botón "Registrarse"
               SizedBox(
                 width: 220,
                 height: 44,
                 child: ElevatedButton(
-                  onPressed: () => Navigator.pushNamed(context, '/register'),
+                  onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     foregroundColor: Colors.black87,
                     elevation: 4,
                     shadowColor: Colors.black26,
                     shape: const StadiumBorder(),
-                    side: const BorderSide(color: Colors.white, width: 0),
-                    textStyle: const TextStyle(fontWeight: FontWeight.w600),
+                    textStyle: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                   child: const Text('Registrarse'),
                 ),
