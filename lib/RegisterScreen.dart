@@ -63,7 +63,7 @@ class RegisterScreen extends StatelessWidget {
                 height: 48,
                 child: ElevatedButton(
                   onPressed: () {
-                    // lógica de registro
+                    Navigator.of(context).pushReplacementNamed('/home');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: primary,

@@ -2,6 +2,8 @@ import 'package:alquilamelo_app/LoginScreen.dart';
 import 'package:alquilamelo_app/RegisterScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:alquilamelo_app/SplashScreen.dart';
+import 'package:alquilamelo_app/HomeScreen.dart';
+import 'package:alquilamelo_app/PerfilScreen.dart';
 
 class AlquilameloApp extends StatelessWidget {
   const AlquilameloApp({super.key});
@@ -24,6 +26,9 @@ class AlquilameloApp extends StatelessWidget {
         '/': (context) => const SplashScreen(),
         '/login': (context) => const LoginScreen(),
         '/register': (context) => const RegisterScreen(),
+        '/home': (context) => const HomeScreen(),
+        '/perfil': (context) => const PerfilScreen(), 
+
       },
     );
   }
