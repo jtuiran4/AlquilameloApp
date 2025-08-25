@@ -141,7 +141,7 @@ class PropertyDetailScreen extends StatelessWidget {
                         borderRadius: const BorderRadius.vertical(
                             top: Radius.circular(16)),
                         child: Image.asset(
-                          "assets/hotel_room.jpg", // reemplaza con tu imagen
+                          "assets/hotel_room.jpg",
                           fit: BoxFit.cover,
                           width: double.infinity,
                           height: 160,

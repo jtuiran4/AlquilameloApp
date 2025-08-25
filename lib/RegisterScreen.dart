@@ -75,7 +75,7 @@ class RegisterScreen extends StatelessWidget {
                   const Text("¿Ya tienes cuenta? "),
                   GestureDetector(
                     onTap: () {
-                      Navigator.of(context).pushReplacementNamed('/login'); // vuelve a Login
+                      Navigator.of(context).pushReplacementNamed('/login'); 
                     },
                     child: const Text(
                       "Inicia sesión",

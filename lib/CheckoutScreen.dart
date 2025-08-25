@@ -31,7 +31,7 @@ class CheckoutScreen extends StatelessWidget {
                       ),
                     ),
                     IconButton(
-                      onPressed: () {}, // ir al perfil
+                      onPressed: () {}, 
                       icon: const Icon(Icons.person, color: primary),
                     ),
                   ],

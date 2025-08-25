@@ -18,7 +18,7 @@ class AlquilameloApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const primary = Color(0xFFF88245); // Naranja
+    const primary = Color(0xFFF88245); 
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -27,7 +27,7 @@ class AlquilameloApp extends StatelessWidget {
         useMaterial3: false,
         primaryColor: primary,
         colorScheme: ColorScheme.fromSeed(seedColor: primary),
-        fontFamily: 'Roboto', // cambia si usas otra fuente
+        fontFamily: 'Roboto', 
       ),
       routes: {
         '/': (context) => const SplashScreen(),
